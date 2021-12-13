@@ -33,7 +33,6 @@ public class ProductRepository {
     }
 
     public void deleteById (int id) {
-        productList.stream().filter(product -> product.getId() == id).findFirst()
-                .ifPresentOrElse((Consumer<? super Product>) productList.remove(id), null);
+        productList.stream().filter(product -> product.getId() == id).findFirst().ifPresent(productList::remove);
     }
 }
