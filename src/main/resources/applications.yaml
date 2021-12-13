@@ -1,0 +1,4 @@
+server:
+  port: 8080
+  srevlet:
+    context-path: /app
